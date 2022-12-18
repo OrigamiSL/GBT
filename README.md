@@ -72,7 +72,7 @@ The experiment parameters of each dataset are formated in the `GBT_data.sh` file
 <p align="center">
 <img src="./img/Univariate.png" height = "500" alt="" align=center />
 <br><br>
-<b>Figure 2.</b> Multivariate forecasting results
+<b>Figure 2.</b> Univariate forecasting results
 </p>
 
 
