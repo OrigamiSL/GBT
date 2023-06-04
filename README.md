@@ -24,8 +24,74 @@ pip install -r requirements.txt
 
 ## Data
 
-ETT, ECL, Traffic, Exchange, weather and ILI datasets were acquired at: [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing); 
-WTH dataset was acquired at: [WTH](https://drive.google.com/drive/folders/1ohGYWWohJlOlb2gsGTeEq3Wii2egnEPR?usp=sharing). We rename the last variable of ECL/Traffic/Exchange from `OT` to original `MT_321`/`Sensor_861`/`Singapore` respectively.
+ETT, ECL, Traffic, Exchange, weather and ILI datasets were acquired at: [datasets](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing); 
+WTH dataset was acquired at: [WTH](https://drive.google.com/drive/folders/1ohGYWWohJlOlb2gsGTeEq3Wii2egnEPR?usp=sharing).
+
+### Data Preparation
+After you acquire raw data of all datasets, please separately place them in corresponding folders at `./data`. 
+
+We place ETT in the folder `./ETT-data`, ECL in the folder `./electricity`, Exchange in the folder `./exchage_rate`, ILI in the folder `./illness`, Traffic in the folder `./traffic` and weather in the folder `./weather` of [here](https://drive.google.com/drive/folders/1ZOYpTUa82_jCcxIdTmyr0LXQfvaM9vIy?usp=sharing) (the folder tree in the link is shown as below) into folder `./data` and rename them from `./ETT-data`,`./electricity`, `./exchange_rate`, `./illness`, `./traffic` and `./weather` to `./ETT`, `./ECL`, `./Exchange`, `./ILI`, `./Traffic` and`./weather` respectively. We rename the file of ECL/Exchange from `electricity.csv`/ `exchange_rate.csv`/ `national_illness.csv`/ `traffic.csv` to `ECL.csv`/ `Exchange.csv`/ `ILI.csv`/ `Traffic.csv` and rename the last variable of ECL/Exchange/Traffic from `OT` to original `MT_321`/ `Singapore`/ `Sensor_861`.
+
+```
+|-Autoformer
+| |-ETT-data
+| | |-ETTh1.csv
+| | |-ETTh2.csv
+| | |-ETTm1.csv
+| | |-ETTm2.csv
+| |
+| |-electricity
+| | |-electricity.csv
+| |
+| |-exchange_rate
+| | |-exchange_rate.csv
+| |
+| |-illness
+| | |-national_illness.csv
+| |
+| |-traffic
+| | |-traffic.csv
+| |
+| |-weather
+| | |-weather.csv
+```
+
+We place the file `WTH.csv` in [here](https://drive.google.com/drive/folders/1ohGYWWohJlOlb2gsGTeEq3Wii2egnEPR?usp=sharing) (the folder tree in the link is shown as below) into folder `./WTH`.
+
+```
+|-WTH.csv
+```
+
+Then you can get the folder tree shown as below:
+
+```
+|-data
+| |-ECL
+| | |-ECL.csv
+| |
+| |-ETT
+| | |-ETTh1.csv
+| | |-ETTh2.csv
+| | |-ETTm1.csv
+| | |-ETTm2.csv
+| |
+| |-Exchange
+| | |-Exchange.csv
+| |
+| |-ILI
+| | |-ILI.csv
+| |
+| |-Traffic
+| | |-Traffic.csv
+| |
+| |-weather
+| | |-weather.csv
+| |
+| |-WTH
+| | |-WTH.csv
+
+```
+
 
 ## Usage
 Commands for training and testing the GBT on Dataset ETT, ECL, WTH, Traffic, Exchange and Weather respectively in the file named as `./scripts/GBT_data.sh`. 
