@@ -4,7 +4,7 @@
 ![cuDNN 8.2.0](https://img.shields.io/badge/cudnn-8.2.0-green.svg?style=plastic)
 ![License CC BY-NC-SA](https://img.shields.io/badge/license-CC_BY--NC--SA--green.svg?style=plastic)
 
-Source code of paper: [GBT: Two-stage Transformer Framework for Non-stationary Time Series Forecasting] (Manuscript submitted to Neural Networks).
+Source code of paper: [GBT: Two-stage Transformer Framework for Non-stationary Time Series Forecasting](https://doi.org/10.1016/j.neunet.2023.06.044) (Accepted by Neural Networks).
 
 
 ## Requirements
