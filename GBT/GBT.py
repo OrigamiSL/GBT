@@ -152,7 +152,7 @@ class GBT(nn.Module):
             dec_out = self.decoder(dec_out)
             output = self.projection(dec_out.permute(0, 2, 1)).transpose(1, 2)
             if self.output_attention:
-                return output[:, -self.pred_len:, :] + first_stage_out[:, -self.pred_len:, :], _
+                return output[:, -self.pred_len:, :] + first_stage_out[:, -self.pred_len:, :], None
             else:
                 return output[:, -self.pred_len:, :] + first_stage_out[:, -self.pred_len:, :]  # [B, L, D]
         elif self.format == 'autoformer':
@@ -164,6 +164,6 @@ class GBT(nn.Module):
             # final
             output = trend + seasonal
             if self.output_attention:
-                return output[:, -self.pred_len:, :], _
+                return output[:, -self.pred_len:, :], None
             else:
                 return output[:, -self.pred_len:, :]  # [B, L, D]
