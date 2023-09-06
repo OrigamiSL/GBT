@@ -38,7 +38,7 @@ parser.add_argument('--auto_d_layers', type=int, default=1, help='num of decoder
 parser.add_argument('--factor', type=int, default=5, help='probsparse attn factor')
 parser.add_argument('--padding', type=int, default=0, help='padding type')
 parser.add_argument('--dropout', type=float, default=0.05, help='dropout')
-parser.add_argument('--attn', type=str, default='full', help='attention used in encoder, options:[prob, full, log]')
+parser.add_argument('--attn', type=str, default='Full', help='attention used in encoder, options:[Prob, Full]')
 parser.add_argument('--criterion', type=str, default='Standard', choices=['Standard', 'Maxabs'],
                     help='options:[Standard, Maxabs]')
 parser.add_argument('--activation', type=str, default='gelu', help='activation')
