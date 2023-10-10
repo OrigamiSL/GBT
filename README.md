@@ -127,7 +127,7 @@ python -u main.py --root_path <root_path> --model <model> --data <data> --featur
 Detailed descriptions of arguments are shown in `main.py`.
 
 ## Results
-The optional experiment parameters of each dataset are formated in the `GBT_data.sh` files in the directory `./scripts/`. You can refer to these parameters for experiments, refer to the settings given in the paper or adjust the parameters to obtain better MSE and MAE results.
+The optional experiment parameters of each dataset are formated in the `GBT_data.sh` files in the directory `./scripts/`. You can refer to these parameters for experiments, refer to the settings given in the paper(results are given in two figures below) or adjust the parameters to obtain better MSE and MAE results.
 
 <p align="center">
 <img src="./img/Multivariate.png" height = "500" alt="" align=center />
